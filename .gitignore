@@ -1,0 +1,21 @@
+### Generic ignores
+# Ignore all files that start with a '.' by default.
+.*
+*.log
+
+### EditorConfig - http://editorconfig.com
+!.editorconfig
+
+### Git
+!.gitignore
+
+### NPM
+# https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+!.npmignore
+node_modules/
+
+### NVM
+!.nvmrc
+
+### Travis CI - https://travis-ci.org
+!.travis.yml
