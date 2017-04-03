@@ -6,6 +6,7 @@ Opinionated modern JavaScript module boilerplate.
 
 * [AVA](https://github.com/avajs/ava) - JavaScript test runner.
 * [Babel](https://babeljs.io) - Next generation JavaScript compiler.
+* [Code Climate](https://codeclimate.com) - Test coverage and code analysis.
 * [EditorConfig](http://editorconfig.org) - Basic editor configuration settings.
 * [Rollup](https://rollupjs.org/) - JavaScript module bundler.
 * [Travis CI](https://travis-ci.org) - Continuous integration testing.
