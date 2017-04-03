@@ -3,6 +3,9 @@
 .*
 *.log
 
+### Babel - https://babeljs.io
+!.babelrc
+
 ### EditorConfig - http://editorconfig.com
 !.editorconfig
 
