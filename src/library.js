@@ -1,5 +1,5 @@
-import { title } from "./title"
+import title from './title'
 
-export default (document) => {
+export default document => {
   return title(document)
 }

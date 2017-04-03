@@ -1,6 +1,6 @@
-function title(document) {
+var title = (function (document) {
   return document.title;
-}
+});
 
 var library = (function (document) {
   return title(document);

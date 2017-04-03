@@ -1,3 +1,3 @@
-export function title(document) {
+export default document => {
   return document.title
 }

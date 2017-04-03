@@ -1,16 +1,16 @@
-import { jsdom } from "jsdom"
-import test from "ava"
+import {jsdom} from 'jsdom'
+import test from 'ava'
 
-import library from "../dist/library.es"
+import library from '../dist/library.es'
 
 test.beforeEach(t => {
-  const document = jsdom("<head><title>wee</title></head><body></body>")
+  const document = jsdom('<head><title>test</title></head><body></body>')
   const window = document.defaultView
   t.context.document = document
   t.context.window = window
   t.context.navigator = window.navigator
 })
 
-test(t => {
-  t.is(library(t.context.document), "wee")
+test('title should be "test"', t => {
+  t.is(library(t.context.document), 'test')
 })

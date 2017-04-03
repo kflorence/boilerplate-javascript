@@ -1,3 +1,7 @@
+addons:
+  code_climate:
+    repo_token: a69ca18323d4258f04e05b5403e45b9628e9f538c9d4d0bcd74673274e7150e4
+
 cache:
   yarn: true
 

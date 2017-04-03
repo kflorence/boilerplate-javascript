@@ -1,5 +1,7 @@
 # boilerplate-javascript-es6
 
+[![Build Status](https://travis-ci.org/kflorence/boilerplate-javascript-es6.svg?branch=master)](https://travis-ci.org/kflorence/boilerplate-javascript-es6) [![Test Coverage](https://codeclimate.com/github/kflorence/boilerplate-javascript-es6/badges/coverage.svg)](https://codeclimate.com/github/kflorence/boilerplate-javascript-es6/coverage) [XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+
 Opinionated modern JavaScript module boilerplate.
 
 * [AVA](https://github.com/avajs/ava) - JavaScript test runner.
@@ -7,6 +9,7 @@ Opinionated modern JavaScript module boilerplate.
 * [EditorConfig](http://editorconfig.org) - Basic editor configuration settings.
 * [Rollup](https://rollupjs.org/) - JavaScript module bundler.
 * [Travis CI](https://travis-ci.org) - Continuous integration testing.
+* [XO](https://github.com/sindresorhus/xo) - JavaScript linter.
 * [Yarn](https://yarnpkg.com) - Dependency management.
 
 ## Usage

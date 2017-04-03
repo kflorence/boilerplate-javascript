@@ -4,9 +4,9 @@
 	(global.library = factory());
 }(this, (function () { 'use strict';
 
-function title(document) {
+var title = (function (document) {
   return document.title;
-}
+});
 
 var library = (function (document) {
   return title(document);
