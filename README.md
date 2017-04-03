@@ -33,6 +33,10 @@ Test your library with:
 $ npm test
 ```
 
+## TODO
+
+* Finish setting up test coverage.
+
 ## License
 
 MIT

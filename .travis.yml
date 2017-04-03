@@ -4,7 +4,7 @@ addons:
 
 after_success:
   - npm install -g codeclimate-test-reporter
-  - codeclimate-test-reporter < lcov.info
+  - CODECLIMATE_REPO_TOKEN=a69ca18323d4258f04e05b5403e45b9628e9f538c9d4d0bcd74673274e7150e4 codeclimate-test-reporter < ./coverage/lcov.info
 
 cache:
   yarn: true
