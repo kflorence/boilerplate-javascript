@@ -10,15 +10,25 @@
     "ava": "^0.18.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.3.2",
+    "cross-env": "^4.0.0",
     "del-cli": "^0.2.1",
     "jsdom": "^9.12.0",
+    "nyc": "^10.2.0",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "xo": "^0.18.1"
   },
   "scripts": {
-    "build": "del-cli dist && rollup -c",
-    "test": "npm run build && xo && ava"
+    "build": "rollup -c",
+    "coverage": "nyc report",
+    "lint": "xo",
+    "prebuild": "del-cli dist/*",
+    "prepublishOnly": "npm run build && npm test",
+    "pretest": "npm run build && npm run lint",
+    "test": "nyc ava"
   },
   "ava": {
     "babel": "inherit",
@@ -29,6 +39,11 @@
   "babel": {
     "presets": [
       "env"
+    ]
+  },
+  "nyc": {
+    "reporter": [
+      "lcov"
     ]
   },
   "xo": {

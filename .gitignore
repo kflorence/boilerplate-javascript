@@ -2,6 +2,7 @@
 # Ignore all files that start with a '.' by default.
 .*
 *.log
+dist
 
 ### Babel - https://babeljs.io
 !.babelrc
@@ -9,16 +10,19 @@
 ### EditorConfig - http://editorconfig.com
 !.editorconfig
 
-### Git
+### Git - https://git-scm.com/
 !.gitignore
 
-### NPM
+### NPM - https://www.npmjs.com/
 # https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
 !.npmignore
 node_modules/
 
-### NVM
+### NVM - https://github.com/creationix/nvm
 !.nvmrc
+
+### NYC - https://github.com/bcoe/nyc
+coverage
 
 ### Travis CI - https://travis-ci.org
 !.travis.yml
