@@ -1,7 +1,7 @@
 import {jsdom} from 'jsdom'
 import test from 'ava'
 
-import library from '../dist/library.es'
+import library from '../dist/test/library'
 
 test.beforeEach(t => {
   const document = jsdom('<head><title>test</title></head><body></body>')

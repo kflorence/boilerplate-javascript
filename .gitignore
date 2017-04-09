@@ -2,7 +2,6 @@
 # Ignore all files that start with a '.' by default.
 .*
 *.log
-dist
 
 ### Babel - https://babeljs.io
 !.babelrc
@@ -22,6 +21,7 @@ node_modules/
 !.nvmrc
 
 ### NYC - https://github.com/bcoe/nyc
+dist/test
 coverage
 
 ### Travis CI - https://travis-ci.org

@@ -2,13 +2,14 @@
   "name": "boilerplate-javascript-es6",
   "version": "0.0.1",
   "description": "Opinionated modern JavaScript module boilerplate.",
-  "main": "dist/library.js",
-  "module": "dist/library.es.js",
+  "main": "dist/umd/library.js",
+  "module": "dist/es/library.js",
   "author": "Kyle Florence",
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.18.2",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-istanbul": "^4.1.1",
     "babel-preset-env": "^1.3.2",
     "cross-env": "^4.0.0",
     "del-cli": "^0.2.1",
@@ -16,19 +17,20 @@
     "nyc": "^10.2.0",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-istanbul": "^1.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
     "xo": "^0.18.1"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm run build:es && npm run build:test && npm run build:umd",
+    "build:es": "rollup -c build/es.js",
+    "build:test": "rollup -c build/test.js",
+    "build:umd": "rollup -c build/umd.js",
     "coverage": "nyc report",
     "lint": "xo",
     "prebuild": "del-cli dist/*",
     "prepublishOnly": "npm run build && npm test",
-    "pretest": "npm run build && npm run lint",
-    "test": "nyc ava"
+    "pretest": "npm run build",
+    "test": "cross-env NODE_ENV=test nyc ava"
   },
   "ava": {
     "babel": "inherit",
@@ -37,8 +39,20 @@
     ]
   },
   "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "external-helpers",
+          "istanbul"
+        ],
+        "presets": [
+          "env"
+        ]
+      }
+    },
+    "plugins": ["external-helpers"],
     "presets": [
-      "env"
+      ["env", { "modules": false }]
     ]
   },
   "nyc": {
